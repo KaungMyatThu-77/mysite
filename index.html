@@ -5,24 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: #0f0f0f;
       color: #f0f0f0;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      padding: 2rem;
+      min-height: 100vh;
       font-family: 'Helvetica Neue', sans-serif;
-      font-size: 1.8rem;
       margin: 0;
+      text-align: center;
     }
+
     .glow {
       color: #00ffe1;
       text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
-  <div class="glow">Hello, it's me, K to the M to the T.</div>
+  <div class="glow">Hello, it's me,<br>K to the M to the T.</div>
 </body>
 </html>
