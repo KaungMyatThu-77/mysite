@@ -53,15 +53,45 @@
       color: #00ffe1;
     }
 
+    .footer {
+      position: fixed;
+      bottom: 1.5rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #333;
+      border: 1px solid #555;
+      transition: background-color 0.3s;
+    }
+
+    .dot.active {
+      background-color: #00ffe1;
+      box-shadow: 0 0 8px #00ffe1;
+    }
+
     .nav-buttons {
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
+      flex-wrap: wrap;
+      gap: 1.2rem;
     }
 
     button {
-      padding: 0.7rem 2rem;
+      padding: 0.7rem 1.5rem;
       font-size: 1.1rem;
       font-weight: bold;
       background-color: transparent;
@@ -71,6 +101,12 @@
       border-radius: 10px;
       animation: glowPulse 5s infinite ease-in-out;
       text-shadow: 0 0 5px #00ffe1;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: rgba(0, 255, 225, 0.1);
+      transform: scale(1.05);
     }
 
     @keyframes glowPulse {
@@ -99,26 +135,6 @@
         color: #00ffe1;
         box-shadow: 0 0 8px #00ffe1, 0 0 20px #00ffe1;
       }
-    }
-
-    .page-indicators {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: #444;
-      transition: background-color 0.3s;
-    }
-
-    .dot.active {
-      background-color: #00ffe1;
-      box-shadow: 0 0 8px #00ffe1;
     }
   </style>
 </head>
@@ -181,13 +197,13 @@
     </ul>
   </div>
 
-    <div class="section">
+  <div class="section">
     <h2>Skills</h2>
     <ul>
-      <li>Networking, cloud platforms, scriptings</li>
+      <li>Networking, cloud platforms, scripting</li>
       <li>Windows Server, UNIX, macOS</li>
-      <li>Office, Adobe, Visual Studio, FTP tools, Oracle Apex</li>
-      <li>Programming: C, C#, Python, JS</li>
+      <li>Office, Adobe, Visual Studio, FTP tools</li>
+      <li>Programming: C, C#, Python</li>
     </ul>
   </div>
 
@@ -201,14 +217,15 @@
     <p><a href="mailto:Xiaoli.WU@globalfoundries.com">Xiaoli.WU@globalfoundries.com</a></p>
   </div>
 
-  <!-- NAVIGATION BUTTONS -->
-  <div class="nav-buttons">
-    <button onclick="prevSection()">Previous</button>
-    <button onclick="nextSection()">Next</button>
+  <!-- FOOTER: NAVIGATION + DOTS -->
+  <div class="footer">
+    <div class="page-indicators" id="dots"></div>
+    <div class="nav-buttons">
+      <button onclick="goHome()">Home</button>
+      <button onclick="prevSection()">Previous</button>
+      <button onclick="nextSection()">Next</button>
+    </div>
   </div>
-
-  <!-- PAGE INDICATORS -->
-  <div class="page-indicators" id="dots"></div>
 
   <script>
     const sections = document.querySelectorAll('.section');
@@ -246,10 +263,16 @@
       }
     }
 
+    function goHome() {
+      currentIndex = 0;
+      showSection(currentIndex);
+    }
+
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowRight') nextSection();
       if (e.key === 'ArrowLeft') prevSection();
+      if (e.key === 'Home') goHome();
     });
   </script>
 </body>
