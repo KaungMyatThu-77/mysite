@@ -2,58 +2,180 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaung Myat Thu – Resume</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      background-color: #000; /* Pure black for better contrast */
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      min-height: 100vh;
-      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #111;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
       margin: 0;
-      text-align: center;
+      padding: 2rem;
     }
 
-    .glow {
-      font-size: clamp(1.5rem, 6vw, 3rem);
-      line-height: 1.4;
-      color: #ffffff;
-      animation: glowPulse 5s infinite ease-in-out;
+    .container {
+      max-width: 900px;
+      margin: auto;
     }
 
-    @keyframes glowPulse {
-      0% {
-        color: #00ffe1;
-        text-shadow: 0 0 8px #00ffe1, 0 0 20px #00ffe1, 0 0 30px #00ffe1;
-      }
-      25% {
-        color: #ff00cc;
-        text-shadow: 0 0 8px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #ff00cc;
-      }
-      50% {
-        color: #ffd700;
-        text-shadow: 0 0 8px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
-      }
-      75% {
-        color: #00ff88;
-        text-shadow: 0 0 8px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88;
-      }
-      100% {
-        color: #00ffe1;
-        text-shadow: 0 0 8px #00ffe1, 0 0 20px #00ffe1, 0 0 30px #00ffe1;
-      }
+    h1, h2, h3 {
+      color: #00ffe1;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .job-title {
+      font-weight: bold;
+      color: #ffd700;
+    }
+
+    .subtext {
+      font-style: italic;
+      color: #aaa;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: #00ffe1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="glow">Hello, it's me,<br>K to the M to the T.</div>
+  <div class="container">
+    <h1>Kaung Myat Thu</h1>
+    <p>Block 348 Bukit Batok St 34 #07-238, Singapore 650348<br>
+    Mobile: 9850 0230 | Email: <a href="mailto:seniorkaung91@gmail.com">seniorkaung91@gmail.com</a></p>
+
+    <div class="section">
+      <h2>Profile</h2>
+      <p>Dependable and result-oriented professional with experience in the IT and semiconductor industries. Skilled in fast-paced environments, both independently and in teams. Motivated, adaptable, and eager to stay ahead in tech trends.</p>
+    </div>
+
+    <div class="section">
+      <h2>Summary</h2>
+      <ul>
+        <li>Experienced in enterprise network design and implementation.</li>
+        <li>Trained in engineering skills and craftsmanship.</li>
+        <li>Cloud computing: IaaS, PaaS, SaaS experience.</li>
+        <li>Strong interest in network infrastructures and continual learning.</li>
+        <li>Currently pursuing a degree in Information Technology and Business.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+
+      <div>
+        <h3 class="job-title">Software Engineer – CWT Globelink Pte Ltd</h3>
+        <div class="subtext">Feb 2025 – Present</div>
+        <ul>
+          <li>Designed and deployed AWS-based Tomcat and DB servers with alert systems.</li>
+          <li>Maintained performance of on-prem servers and VMs.</li>
+          <li>Collaborated on Oracle APEX development and UAT.</li>
+          <li>Part of Project Management Team; liaised with vendors.</li>
+          <li>Audit liaison ensuring compliance with security standards.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="job-title">Senior Associate Engineer – GlobalFoundries Inc</h3>
+        <div class="subtext">Sep 2018 – Feb 2025</div>
+        <ul>
+          <li>Supported CIM systems and hardware in a cleanroom environment.</li>
+          <li>Performed Level 1 support, scripting, and user training.</li>
+          <li>Managed network hardware for new fab setup in Woodlands (Fab 7H).</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="job-title">Assistant System Engineer – CWT Globelink</h3>
+        <div class="subtext">Mar 2017 – Sep 2017</div>
+        <ul>
+          <li>Supported data center relocation and server implementation.</li>
+          <li>Handled VoIP and biometric security systems setup.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="job-title">Customer Service – Manhattan Fish Market</h3>
+        <div class="subtext">May 2016 – Jan 2017</div>
+      </div>
+
+      <div>
+        <h3 class="job-title">Sales Associate – 7-Eleven</h3>
+        <div class="subtext">Aug 2015 – Jan 2016</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Singapore University of Social Sciences</strong> – Bachelor in IT & Business (In Progress)</li>
+        <li><strong>Ngee Ann Polytechnic</strong> – Diploma in Electronic & Computer Engineering, 2018</li>
+        <li><strong>Myanmar Matriculation</strong> – Distinctions in 5 subjects</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Basic Routing/Switching (Cisco), Electronics Prototyping</li>
+        <li>OS: Windows Server, macOS, UNIX, Linux</li>
+        <li>Cloud: Azure, AWS, GCP</li>
+        <li>Programming: C, C#, Python</li>
+        <li>Software: Adobe Suite, Office, Visual Studio, FTP tools</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Personal Details</h2>
+      <ul>
+        <li>NRIC: MG310894 / S9682415G</li>
+        <li>DOB: 23 Dec 1996 | Nationality: Myanmar</li>
+        <li>Languages: English, Burmese | Marital Status: Single</li>
+        <li>Availability: 1-month notice | Expected Salary: $4,000 (negotiable)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Reference</h2>
+      <p>Mr. Wu Xiaoli, Manager, Mfg Systems Engineering<br>
+      GlobalFoundries, Woodlands<br>
+      M: 9363 8326 | O: 6670 3795<br>
+      E: <a href="mailto:Xiaoli.WU@globalfoundries.com">Xiaoli.WU@globalfoundries.com</a></p>
+    </div>
+  </div>
 </body>
 </html>
