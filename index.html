@@ -23,14 +23,21 @@
     }
 
     .glow {
-      color: #00ffe1;
-      text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
       font-size: clamp(1.5rem, 5vw, 3rem);
       line-height: 1.4;
+      color: #00ffe1;
+      animation: glowPulse 5s infinite linear;
     }
-  </style>
-</head>
-<body>
-  <div class="glow">Hello, it's me,<br>K to the M to the T.</div>
-</body>
-</html>
+
+    @keyframes glowPulse {
+      0% {
+        color: #00ffe1;
+        text-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
+      }
+      25% {
+        color: #ff00cc;
+        text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+      }
+      50% {
+        color: #ffd700;
+        text-shadow: 0 0 10px #ffd700
